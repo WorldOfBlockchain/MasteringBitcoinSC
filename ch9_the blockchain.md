@@ -43,14 +43,14 @@ Variable     | TXs          | TXs recorded in this block
 
 ### Block Header
 
-Size     | Field               | Description
----------|---------------------|--------------
-4 bytes  | Version             | Version no. to track software / protocol upgrades
-32 bytes | Previous Block Hash | Reference to the previous block
-32 bytes | Merkle Root         | Hash of the root of the Merkle tree of TXs
-4 bytes  | Timestamp           | Approx. creation
-4 bytes  | Difficulty Target   | PoW difficulty target
-4 bytes  | Nonce               | Counter for PoW
+Size     | Field (in code) | Description
+---------|-----------------|--------------
+4 bytes  | nVersion        | Version no. to track software / protocol upgrades
+32 bytes | hashPrevBlock   | Previous Block Hash: Reference to the previous block
+32 bytes | hashMerkleRoot  | Hash of the root of the Merkle tree of TXs
+4 bytes  | nTime           | Approx. timestamp of creation
+4 bytes  | nBits           | PoW difficulty target
+4 bytes  | nNonce          | Counter for PoW
 
 - The nonce, difficulty target, and timestamp are used in the mining process.
 
